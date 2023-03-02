@@ -1,0 +1,119 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);   /* (paragraphs) */
+    --Very-light-gray: hsl(0, 0%, 95%);             /* (background, headings, buttons)*/
+}
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.card {
+    width: 1000px;
+    border-radius: .5rem;
+}
+.card .card-container {
+    height: 550px;
+    display: flex;
+    border-radius: .5rem;
+}
+.card .card-container div {
+    padding: 1.5rem;
+    border-radius: .5rem;
+    position: relative;
+}
+.card .card-container div .image {
+    padding: 3rem 2rem 0;
+}
+.card .card-container div .image img {
+    margin-top: -30px;
+}
+.card .card-container div .text {
+    padding: 3rem 2rem;
+    margin-bottom: 100px;
+}
+.card .card-container div .text h1 {
+    margin: 0;
+    margin-top: -20px;
+    color: var(--Very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+.card .card-container div .text p {
+    color: var(--Transparent-white);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 219px;
+}
+.card .card-container div .btn {
+    padding-bottom: 1.7rem;
+    position: absolute;
+    bottom: 11px;
+}
+.card .card-container div .btn button{
+    padding: 1rem;
+    border: 0;
+    border-radius: 1.6rem;
+    width: 150px;
+    font-weight: bold;
+    background-color: var(--Very-light-gray);
+}
+.card .card-container > div:nth-child(1) {
+    background-color: var(--Bright-orange);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.card .card-container>div:nth-child(1) .btn button {
+    color: var(--Bright-orange);
+}
+.card .card-container > div:nth-child(2) {
+    background-color: var(--Dark-cyan);
+    border-radius: 0;
+}
+.card .card-container>div:nth-child(2) .btn button {
+    color: var(--Dark-cyan);
+}
+.card .card-container > div:nth-child(3) {
+    background-color: var(--Very-dark-cyan);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.card .card-container>div:nth-child(3) .btn button {
+    color: var(--very-Dark-cyan);
+}
+.card .card-container div .btn button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: var(--Very-light-gray);
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (max-width: 450px) {
+    body {
+        padding: 1rem;
+    }
+    .card .card-container {
+        height: fit-content;
+        flex-direction: column;
+    }
+    .card .card-container>div:nth-child(1) {
+        border-radius: .5rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card .card-container>div:nth-child(2) {
+        border-radius: 0;
+    }
+    .card .card-container>div:nth-child(3) {
+        border-radius: .5rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
